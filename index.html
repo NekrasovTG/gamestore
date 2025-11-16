@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GameStore - Games and In-Game Currency Marketplace</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <div class="particles" id="particles"></div>
+  <div class="notification-container" id="notifications"></div>
+
+  <div class="container">
+    <header>
+      <div class="logo">GAMESTORE</div>
+      <nav>
+        <a href="#games">Games</a>
+        <a href="#currency">Currency</a>
+        <a href="#sales">Sales</a>
+        <a href="#reviews">Reviews</a>
+      </nav>
+      <div class="search-cart">
+        <input type="text" placeholder="Search games...">
+        <button class="cart-btn">🛒 <span class="cart-count">0</span></button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Best Games<br>and Gaming Currency</h1>
+        <p>Instant code delivery • Secure payment • 24/7 support</p>
+        <div class="stats">
+          <div class="stat-item">
+            <span class="stat-number" id="total-sales">15,234</span>
+            <span class="stat-label">Happy Customers</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">500+</span>
+            <span class="stat-label">Games in Catalog</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">24/7</span>
+            <span class="stat-label">Support</span>
+          </div>
+        </div>
+        <button class="cta-button">Browse Catalog</button>
+      </div>
+      
+      <div class="floating-games">
+        <div class="game-card floating-card-1" data-depth="0.2">
+          <img src="https://via.placeholder.com/200x280/FF6B6B/ffffff?text=Cyberpunk+2077" alt="Game 1">
+        </div>
+        <div class="game-card floating-card-2" data-depth="0.4">
+          <img src="https://via.placeholder.com/200x280/4ECDC4/ffffff?text=GTA+V" alt="Game 2">
+        </div>
+        <div class="game-card floating-card-3" data-depth="0.3">
+          <img src="https://via.placeholder.com/200x280/95E1D3/ffffff?text=Valorant" alt="Game 3">
+        </div>
+        <div class="game-card floating-card-4" data-depth="0.5">
+          <img src="https://via.placeholder.com/200x280/F38181/ffffff?text=CS2" alt="Game 4">
+        </div>
+        <div class="game-card floating-card-5" data-depth="0.25">
+          <img src="https://via.placeholder.com/200x280/AA96DA/ffffff?text=Dota+2" alt="Game 5">
+        </div>
+        <div class="game-card floating-card-6" data-depth="0.35">
+          <img src="https://via.placeholder.com/200x280/FCBAD3/ffffff?text=League+of+Legends" alt="Game 6">
+        </div>
+        <div class="game-card floating-card-7" data-depth="0.45">
+          <img src="https://via.placeholder.com/200x280/A8D8EA/ffffff?text=Minecraft" alt="Game 7">
+        </div>
+        <div class="game-card floating-card-8" data-depth="0.3">
+          <img src="https://via.placeholder.com/200x280/FFB6B9/ffffff?text=Elden+Ring" alt="Game 8">
+        </div>
+        <div class="game-card floating-card-9" data-depth="0.4">
+          <img src="https://via.placeholder.com/200x280/C7CEEA/ffffff?text=Fortnite" alt="Game 9">
+        </div>
+        <div class="game-card floating-card-10" data-depth="0.5">
+          <img src="https://via.placeholder.com/200x280/B5EAD7/ffffff?text=Apex+Legends" alt="Game 10">
+        </div>
+        <div class="game-card floating-card-11" data-depth="0.2">
+          <img src="https://via.placeholder.com/200x280/FFDAC1/ffffff?text=Overwatch+2" alt="Game 11">
+        </div>
+        <div class="game-card floating-card-12" data-depth="0.35">
+          <img src="https://via.placeholder.com/200x280/E2F0CB/ffffff?text=Warzone" alt="Game 12">
+        </div>
+      </div>
+    </section>
+
+    <section class="flash-sale" id="sales">
+      <div class="sale-header">
+        <h2>⚡ Flash Sale</h2>
+        <div class="timer" id="timer">
+          <div class="timer-block">
+            <span class="timer-value" id="hours">12</span>
+            <span class="timer-label">Hours</span>
+          </div>
+          <div class="timer-separator">:</div>
+          <div class="timer-block">
+            <span class="timer-value" id="minutes">34</span>
+            <span class="timer-label">Minutes</span>
+          </div>
+          <div class="timer-separator">:</div>
+          <div class="timer-block">
+            <span class="timer-value" id="seconds">56</span>
+            <span class="timer-label">Seconds</span>
+          </div>
+        </div>
+      </div>
+      <div class="sale-grid">
+        <div class="sale-item">
+          <div class="discount-badge">-60%</div>
+          <img src="https://via.placeholder.com/300x400/FF6B6B/ffffff?text=Red+Dead+Redemption+2" alt="RDR2">
+          <div class="sale-info">
+            <h3>Red Dead Redemption 2</h3>
+            <div class="price-row">
+              <span class="old-price">$59.99</span>
+              <span class="new-price">$23.99</span>
+            </div>
+            <button class="buy-btn">Buy Now</button>
+          </div>
+        </div>
+        <div class="sale-item">
+          <div class="discount-badge">-50%</div>
+          <img src="https://via.placeholder.com/300x400/4ECDC4/ffffff?text=Hogwarts+Legacy" alt="Hogwarts">
+          <div class="sale-info">
+            <h3>Hogwarts Legacy</h3>
+            <div class="price-row">
+              <span class="old-price">$69.99</span>
+              <span class="new-price">$34.99</span>
+            </div>
+            <button class="buy-btn">Buy Now</button>
+          </div>
+        </div>
+        <div class="sale-item">
+          <div class="discount-badge">-70%</div>
+          <img src="https://via.placeholder.com/300x400/95E1D3/ffffff?text=Witcher+3" alt="Witcher">
+          <div class="sale-info">
+            <h3>The Witcher 3</h3>
+            <div class="price-row">
+              <span class="old-price">$39.99</span>
+              <span class="new-price">$11.99</span>
+            </div>
+            <button class="buy-btn">Buy Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="products" id="games">
+      <h2>Popular Games</h2>
+      <div class="product-grid">
+        <div class="product-item">
+          <div class="product-image">
+            <img src="https://via.placeholder.com/280x380/6C5CE7/ffffff?text=Elden+Ring" alt="Elden Ring">
+            <span class="badge hot">HOT</span>
+          </div>
+          <div class="product-info">
+            <h3>Elden Ring</h3>
+            <p class="platform">Steam • PC</p>
+            <div class="price-box">
+              <span class="price">$59.99</span>
+              <button class="buy-btn" onclick="addToCart('Elden Ring', 59.99)">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <div class="product-image">
+            <img src="https://via.placeholder.com/280x380/00B894/ffffff?text=Baldur's+Gate+3" alt="BG3">
+            <span class="badge new">NEW</span>
+          </div>
+          <div class="product-info">
+            <h3>Baldur's Gate 3</h3>
+            <p class="platform">Steam • PC</p>
+            <div class="price-box">
+              <span class="price">$69.99</span>
+              <button class="buy-btn" onclick="addToCart('Baldurs Gate 3', 69.99)">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <div class="product-image">
+            <img src="https://via.placeholder.com/280x380/FD79A8/ffffff?text=Starfield" alt="Starfield">
+            <span class="badge sale">-20%</span>
+          </div>
+          <div class="product-info">
+            <h3>Starfield</h3>
+            <p class="platform">Steam • PC</p>
+            <div class="price-box">
+              <span class="old-price">$79.99</span>
+              <span class="price">$63.99</span>
+              <button class="buy-btn" onclick="addToCart('Starfield', 63.99)">Buy</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <div class="product-image">
+            <img src="https://via.placeholder.com/280x380/A29BFE/ffffff?text=Cyberpunk+2077" alt="Cyberpunk">
+          </div>
+          <div class="product-info">
+            <h3>Cyberpunk 2077</h3>
+            <p class="platform">Steam • PC</p>
+            <div class="price-box">
+              <span class="price">$49.99</span>
+              <button class="buy-btn" onclick="addToCart('Cyberpunk 2077', 49.99)">Buy</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="currency-section" id="currency">
+      <h2>Gaming Currency</h2>
+      <div class="currency-grid">
+        <div class="currency-card">
+          <div class="currency-icon">💎</div>
+          <h3>Steam Wallet</h3>
+          <div class="currency-options">
+            <button class="currency-option" onclick="addToCart('Steam Wallet $10', 10)">
+              <span>$10</span>
+            </button>
+            <button class="currency-option" onclick="addToCart('Steam Wallet $20', 20)">
+              <span>$20</span>
+            </button>
+            <button class="currency-option popular" onclick="addToCart('Steam Wallet $50', 50)">
+              <span>$50</span>
+              <small>Popular</small>
+            </button>
+            <button class="currency-option" onclick="addToCart('Steam Wallet $100', 100)">
+              <span>$100</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="currency-card">
+          <div class="currency-icon">⚡</div>
+          <h3>Valorant Points</h3>
+          <div class="currency-options">
+            <button class="currency-option" onclick="addToCart('Valorant Points 1000', 9.99)">
+              <span>1000 VP</span>
+              <small>$9.99</small>
+            </button>
+            <button class="currency-option popular" onclick="addToCart('Valorant Points 2500', 24.99)">
+              <span>2500 VP</span>
+              <small>$24.99</small>
+            </button>
+            <button class="currency-option" onclick="addToCart('Valorant Points 5000', 49.99)">
+              <span>5000 VP</span>
+              <small>$49.99</small>
+            </button>
+            <button class="currency-option" onclick="addToCart('Valorant Points 10000', 99.99)">
+              <span>10000 VP</span>
+              <small>$99.99</small>
+            </button>
+          </div>
+        </div>
+
+        <div class="currency-card">
+          <div class="currency-icon">🎮</div>
+          <h3>PlayStation Network</h3>
+          <div class="currency-options">
+            <button class="currency-option" onclick="addToCart('PSN $10', 10)">
+              <span>$10</span>
+            </button>
+            <button class="currency-option" onclick="addToCart('PSN $25', 25)">
+              <span>$25</span>
+            </button>
+            <button class="currency-option popular" onclick="addToCart('PSN $50', 50)">
+              <span>$50</span>
+              <small>Popular</small>
+            </button>
+            <button class="currency-option" onclick="addToCart('PSN $100', 100)">
+              <span>$100</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="currency-card">
+          <div class="currency-icon">🔶</div>
+          <h3>Apex Coins</h3>
+          <div class="currency-options">
+            <button class="currency-option" onclick="addToCart('Apex Coins 1000', 9.99)">
+              <span>1000 Coins</span>
+              <small>$9.99</small>
+            </button>
+            <button class="currency-option" onclick="addToCart('Apex Coins 2000', 19.99)">
+              <span>2000 Coins</span>
+              <small>$19.99</small>
+            </button>
+            <button class="currency-option popular" onclick="addToCart('Apex Coins 4000', 39.99)">
+              <span>4000 Coins</span>
+              <small>$39.99</small>
+            </button>
+            <button class="currency-option" onclick="addToCart('Apex Coins 10000', 99.99)">
+              <span>10000 Coins</span>
+              <small>$99.99</small>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews" id="reviews">
+      <h2>Customer Reviews</h2>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar">👨‍💻</div>
+            <div class="reviewer-info">
+              <h4>Alex M.</h4>
+              <div class="stars">⭐⭐⭐⭐⭐</div>
+            </div>
+          </div>
+          <p class="review-text">"Bought Elden Ring, code arrived instantly! Great prices and fast delivery. Will buy again!"</p>
+          <span class="review-date">2 days ago</span>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar">👩‍🎨</div>
+            <div class="reviewer-info">
+              <h4>Maria K.</h4>
+              <div class="stars">⭐⭐⭐⭐⭐</div>
+            </div>
+          </div>
+          <p class="review-text">"Topped up Steam Wallet for the third time. Always works flawlessly. Highly recommend!"</p>
+          <span class="review-date">5 days ago</span>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar">🎮</div>
+            <div class="reviewer-info">
+              <h4>Dmitry P.</h4>
+              <div class="stars">⭐⭐⭐⭐⭐</div>
+            </div>
+          </div>
+          <p class="review-text">"Excellent store! Great selection of games, fair prices. Support responds quickly. 10/10"</p>
+          <span class="review-date">1 week ago</span>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar">🌟</div>
+            <div class="reviewer-info">
+              <h4>Elena V.</h4>
+              <div class="stars">⭐⭐⭐⭐⭐</div>
+            </div>
+          </div>
+          <p class="review-text">"Bought Valorant Points for my son. Everything went perfectly, he's thrilled!"</p>
+          <span class="review-date">2 weeks ago</span>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>GAMESTORE</h3>
+          <p>Your trusted marketplace<br>for games and gaming currency</p>
+          <div class="live-counter">
+            <div class="counter-pulse"></div>
+            <span>Purchases made today: <strong id="live-counter">1,247</strong></span>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="#games">PC Games</a></li>
+            <li><a href="#currency">Gaming Currency</a></li>
+            <li><a href="#sales">Sales & Deals</a></li>
+            <li><a href="#">Subscriptions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Information</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Delivery & Payment</a></li>
+            <li><a href="#">Guarantees</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">24/7 Support Service</a></li>
+            <li><a href="#">Refund Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 GameStore. All rights reserved.</p>
+        <div class="payment-methods">
+          <span>💳 Visa</span>
+          <span>💳 MasterCard</span>
+          <span>💳 Amex</span>
+          <span>📱 PayPal</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
